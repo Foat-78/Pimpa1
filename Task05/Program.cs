@@ -3,6 +3,11 @@
 // 4 -> "-4, -3, -2, -1, 0, 1, 2, 3, 4"
 // 2 -> "-2, -1, 0, 1, 2"
 
-Console.WriteLine("Ввидите число");
-int number = Convert.ToInt32(Console.ReadLine());
-while ()
+Console.WriteLine("Ввидите целое положительное число");
+int num = Convert.ToInt32(Console.ReadLine());
+int count = -num;
+while (count <= num)
+{
+    Console.Write($"{count} ");
+    count++;
+}
