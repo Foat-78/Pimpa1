@@ -14,5 +14,5 @@ int max = numbersA;
 if (numbersB > max) max = numbersB;
 if (numbersC > max) max = numbersC;
 {
-    Console.WriteLine($"Да, максимальное число является {max}");
+    Console.WriteLine($"Максимальное число является {max}!");
 }
