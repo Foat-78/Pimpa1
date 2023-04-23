@@ -4,9 +4,9 @@
 // a = 5; b = 7 -> max = 7
 // a = 2; b = 10 -> max = 10
 // a = -9; b = -3 -> max = -3
-Console.WriteLine("Введи число a!");
+Console.WriteLine("Ввиди число a!");
 int numbersa = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введи число b!");
+Console.WriteLine("Ввиди число b!");
 int numbersb = Convert.ToInt32(Console.ReadLine());
 int max = numbersa;
 int min = numbersa;
@@ -18,3 +18,4 @@ if (numbersb < min) min = numbersb;
 {
     Console.WriteLine($"Минимальное число является {min}!");
 }
+//Ууууурррррааааааааааааааа!
