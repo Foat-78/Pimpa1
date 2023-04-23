@@ -10,12 +10,6 @@ Console.WriteLine("Ввиди число b!");
 int numbersb = Convert.ToInt32(Console.ReadLine());
 int max = numbersa;
 int min = numbersa;
-if (numbersb > max) max = numbersb;
-{
-    Console.WriteLine($"Максимальное число является {max}!");
-}
-if (numbersb < min) min = numbersb;
-{
-    Console.WriteLine($"Минимальное число является {min}!");
-}
+if (numbersb > max) max = numbersb; Console.WriteLine($"Максимальное число является {max}!");
+if (numbersb < min) min = numbersb; Console.WriteLine($"Минимальное число является {min}!");
 //Ууууурррррааааааааааааааа!
