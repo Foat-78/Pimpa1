@@ -6,15 +6,15 @@
 // 7 -> нет
 Console.WriteLine("Введи любое число!");
 int numbers = Convert.ToInt32(Console.ReadLine());
-if (1 == numbers % 2)
+if (numbers % 2 == 1)
 {
 Console.WriteLine("Число не является чётным!");
 }
-if (-1 == numbers % 2)
+if (numbers % 2 == -1)
 {
 Console.WriteLine("Число не является чётным!");
 }
-if (0 == numbers % 2)
+if (numbers % 2 == 0)
 Console.WriteLine("Число является чётным!");
 
 //Ууууррррраааааа!!!
