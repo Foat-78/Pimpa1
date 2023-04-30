@@ -9,23 +9,21 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 int result1 = DispleySecondDigit(number);
 bool result2 = ValidateNumber(number);
+Console.WriteLine(result1 < 10 ? result1 : result2);
 
- Console.WriteLine(result1 < 10 ? result1 : result2);
-
-int DispleySecondDigit (int num)
+int DispleySecondDigit(int num)
 {
     while (num > 999)
     {
-        num /=10;
+        num = num / 10;
     }
-    return num % 10; 
+    return num = num % 10;
 }
-
-bool ValidateNumber (int num)
+bool ValidateNumber(int num)
 {
     if (num < 100)
     {
-        Console.WriteLine("Третьей цифры нет");
+        Console.Write("Третьей цифры нет ");
         return false;
     }
     return true;
