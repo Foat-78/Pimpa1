@@ -7,14 +7,26 @@
 Console.WriteLine("Введите любое число");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int result = DispleySecondDigit(number);
-Console.WriteLine(result);
+int result1 = DispleySecondDigit(number);
+bool result2 = ValidateNumber(number);
 
-int DispleySecondDigit (int number)
+ Console.WriteLine(result1 < 10 ? result1 : result2);
+
+int DispleySecondDigit (int num)
 {
-    while (number > 999)
+    while (num > 999)
     {
-        number /=10;
+        num /=10;
     }
-    return number % 10;
+    return num % 10; 
+}
+
+bool ValidateNumber (int num)
+{
+    if (num < 100)
+    {
+        Console.WriteLine("Третьей цифры нет");
+        return false;
+    }
+    return true;
 }
