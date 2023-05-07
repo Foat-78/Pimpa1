@@ -9,7 +9,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 bool result = Palindrome(number);
 
-if (number < 10000 || number >= 100000)
+if (number < 10000 || number >= 100000 && number < -10000 || number >= 100000)
 {
     Console.Write("Ошибка - введите пятизначное число и повторите операцию!");
 
@@ -29,6 +29,6 @@ bool Palindrome(int num)
     int fifthDigit = num % 10;
     int secondDigit = num / 1000 % 10;
     int fourthDigit = num / 10 % 10;
-    int Digits = firstDigit / fifthDigit * secondDigit / fourthDigit;
-    return Digits == 1;
+    int digits = firstDigit / fifthDigit * secondDigit / fourthDigit;
+    return digits == 1;
 }
