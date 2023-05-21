@@ -30,7 +30,7 @@ void FillArray(int[] array)
 
 // // int[] arr = new int[8];
 
-//            // FillArray(arr);
+//             FillArray(arr);
 //             int[] newArr = CreateArray(12);
 //             Console.Write("[");
 //             PrintArray(newArr);
