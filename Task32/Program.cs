@@ -36,13 +36,13 @@ void InverseArray(int [] arr)
 
 Console.WriteLine ("Введите число элементов");
 int elements = Convert.ToInt32(Console.ReadLine());
-int [] arr = new int [elements];
+
 
 Console.WriteLine ("Введите минимальное число диапазона");
 int minimum = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine ("Введите максимальное число диапазона");
 int maximum = Convert.ToInt32(Console.ReadLine());
-int[] array = CreateArrayRndInt(elements, minimum, maximum+1);
+int[] array = CreateArrayRndInt(elements, minimum, maximum);
 
 
 Console.Write("[");
