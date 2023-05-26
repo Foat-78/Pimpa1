@@ -5,17 +5,18 @@
 // 4 -> 10
 // 8 -> 36
 
-Console.WriteLine("Введите положительное целое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите положительное целое число: "); //Запрос на ввод пользователю
+int number = Convert.ToInt32(Console.ReadLine()); //Для получения числа осуществляем конвертацию
 
-int SumNumbers(int num)
+int sumNumbers = SumNumbers(number);//для вывода мы задаем переменную и к нему присваеваем то что получаем в методе - вызваем метод.
+Console.WriteLine($"Сумма чисел от 1 до {number} = {sumNumbers}");//и выводим пользователю через интерполяцию
+
+int SumNumbers(int num) // Задаем имя метода в с кобках указываем исходные данные которое задаёт пользователь
 {
-    int sum = 0;
-    for (int i = 1; i <= num; i++)
+    int sum = 0; // Задаем переменную для получения результата
+    for (int i = 1; i <= num; i++) //Задаем цикл for. Цикл for задаётся когда мы знаем количество этерации, а когда знаем то тогда задаем цикл while
     {
        sum = sum + i; 
     }
     return sum;
 }
-int sumNumbers = SumNumbers(number);
-Console.WriteLine($"Сумма чисел от 1 до {number} = {sumNumbers}");
