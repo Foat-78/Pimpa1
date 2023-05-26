@@ -4,18 +4,17 @@
 // 78 -> 2
 // 89126 -> 5
 
-Console.WriteLine("Введите целое число: ");
-int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите целое число: "); //Задаем команду ползователю на ввод числа через консоль 
+int number = Convert.ToInt32(Console.ReadLine());//задаем название и присваеваем значение которое задал пользователь
 
 int count = CountNumbers(number);
-
 Console.WriteLine($"Кол-во цифр в числе {number} =  {count}");
 
-
-int CountNumbers (int num)
+int CountNumbers (int num) //Задаем метод приваевем ему название и в скобках задаем исходные данные которое задал пользователь
 {
-    int i = 0;
-    while (num != 0) 
+    int i = 0; //в теле метода задаём счетчик и присваеваем значение 0
+    while (num != 0)  //задаем цикл и условие цикла при котором в теле цикла будет выполнятся операция пока условие значение будет равно нулю
+
     {
         num = num / 10;
         i++;
