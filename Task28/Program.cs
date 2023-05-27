@@ -6,10 +6,12 @@
 
 Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-
+if (number >= 0) Console.WriteLine("Введено не натуральное число!!!");
+else
+{
 int produktNumber = ProduktNumber(number);
 Console.WriteLine($"Кол-во цифр в числе {number} =  {produktNumber}");
-
+}
 // int ProduktNumber (int num)
 // {
 //     int count = 1;
