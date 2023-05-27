@@ -7,18 +7,21 @@
 Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int count = CountNumbers(number);
+int produktNumber = ProduktNumber(number);
+Console.WriteLine($"Кол-во цифр в числе {number} =  {produktNumber}");
 
-Console.WriteLine($"Кол-во цифр в числе {number} =  {count}");
-
-
-int CountNumbers (int num)
+int ProduktNumber (int num)
 {
-    int i = 0;
-    while (num != 0) 
+    int count = 1;
+    int  i = 1;
+    while (i <= num) 
     {
-        num = num / 10;
+        count *= i;
         i++;
     }
-    return i;
+    return count;
 }
+//1*1=1
+//1*2=2
+//2*3=6
+//6*4=24
