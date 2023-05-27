@@ -1,4 +1,13 @@
-﻿int[] CreateArrayRndInt(int size, int min, int max)
+﻿// Задача 33:
+// 1. Задайте массив. 
+// 2. Напишите программу, которая определяет элементы, 
+// присутствует ли заданное число в массиве.
+// 4; массив [6,7,19,345,3]->нет
+// 3; массив [6,7,19,345,3]->да
+
+
+
+int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
     Random rnd = new Random();
