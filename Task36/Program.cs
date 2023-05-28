@@ -31,10 +31,7 @@ int SumNumbers(int[] arr)
     int sum = 0;
     for (int i = 1; i < arr.Length; i++)
     {
-        if (i % 2 == 1)
-        {
-            sum += arr[i];
-        }
+        if (i % 2 == 1) sum += arr[i];
     }
     return sum;
 }
