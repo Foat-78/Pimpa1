@@ -5,35 +5,35 @@
 // [6 7 3 6] -> 36 21
 int[] CreateArrayRndInt(int size, int min, int max)
 {
-    int[] arr = new int[size];
+    int[] array = new int[size];
     Random rnd = new Random();
 
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        arr[i] = rnd.Next(min, max + 1);
+        array[i] = rnd.Next(min, max + 1);
     }
-    return arr;
+    return array;
 }
 
-void PrintArray(int[] arr, string sep)
+void PrintArray(int[] array, string sep)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i < arr.Length - 1) Console.Write($"{arr[i]}{sep} ");
-        else Console.Write($"{arr[i]}");
+        if (i < array.Length - 1) Console.Write($"{array[i]}{sep} ");
+        else Console.Write($"{array[i]}");
     }
 }
 
-int[] MultiplicationPairNums(int[] arr)
+int[] MultiplicationPairNums(int[] array)
 {
-    int size = arr.Length/2;
-    if(arr.Length % 2 == 1) size += 1;
+    int size = array.Length / 2; //создаем переменную size и присваиваем исходный размер массива для подсчета с четным количеством элемента в массиве т.е. размер массива делим на попалам
+    if (array.Length % 2 == 1) size += 1;//если длина массива остатком деления на 2 будет равно 1 то мы на размер массива присвеваем 1
     int[] newArr = new int[size];
-    for (int i = 0; i < arr.Length/2; i++)
+    for (int i = 0; i < array.Length / 2; i++)
     {
-        newArr[i] = arr[i]*arr[arr.Length - 1 - i];
+        newArr[i] = array[i] * array[array.Length - 1 - i];
     }
-    if(arr.Length % 2 == 1) newArr[size - 1] = arr[arr.Length/2];
+    if (array.Length % 2 == 1) newArr[size - 1] = array[array.Length / 2];//строка вывода нечетного элемента в массиве когда массив состоит из нечетного количества элементов Например из 5, 7, 9, 11, и тд
     return newArr;
 }
 
@@ -44,6 +44,6 @@ Console.Write("[");
 PrintArray(array, ",");
 Console.Write("] -> ");
 
-int[] resArr = MultiplicationPairNums(array); 
+int[] resArr = MultiplicationPairNums(array);
 
 PrintArray(resArr, ",");
