@@ -20,3 +20,4 @@ int SumNumbers(int num) // Задаем имя метода и в скобках
     }
     return sum;
 }
+
