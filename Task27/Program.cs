@@ -13,11 +13,11 @@ Console.WriteLine($"Сумма цифр {numbers} -> {sumNumbers}");
 
 int SumNumbers(int num)
 {
-   int sum = 0;
+    int sum = 0;
     while (num > 0)
     {
-       sum = sum + num % 10; //эквивалент sum += num % 10;
-       num = num / 10;            
-    }        
-        return sum;
+        sum = sum + num % 10; //эквивалент sum += num % 10;
+        num = num / 10;
+    }
+    return sum;
 }
