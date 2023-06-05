@@ -6,7 +6,7 @@
 
 Console.WriteLine("Введите целое число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-if (number >= 0) Console.WriteLine("Введено не натуральное число!!!");
+if (number <= 0) Console.WriteLine("Введено не натуральное число!!!");
 else
 {
 int produktNumber = ProduktNumber(number);
@@ -33,7 +33,10 @@ int ProduktNumber (int num)
     int count = 1;
     for (int i = 1; i <= num; i++)
     {
+        checked //оператор который проверяет на переполнение чисел в ToInt32 и выдаёт ошибку
+        {
         count *= i;
+        }
     }
     return count;
 }
