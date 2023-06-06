@@ -2,14 +2,18 @@
 // все натуральные числа в промежутке от 1 до N.
 // N = 5 -> "1, 2, 3, 4, 5"
 // N = 6 -> "1, 2, 3, 4, 5, 6"
-Console.WriteLine("Введите натуральное число");
+
+Console.WriteLine("Введите натуральное число N: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-NaturalNumbers(number);
+Console.Write($"N = {number} -> ");
+NaturalNumber(number, " ");
 
-void NaturalNumbers (int num) //0
+
+void NaturalNumber(int num, string sep)
 {
-    if (num == 0) return;
-    Console.Write($"{num} ");
-    NaturalNumbers (num - 1);
+    if(num == 0) return; // условие вывода
+    // Console.Write($"{num}, ");     // при условии вывода по примеру 5, 4, 3, 1
+    NaturalNumber(num - 1, sep);    // вызов метода при котором будет сохранять полученное значение от пользователя -1 в стек, в случае когда консоль стоит перед рекурсией тогда называется "хвостовая рекурсия"    
+    Console.Write($"{num}, ");  // при условии вывода по примеру 1, 2, 3, 4, 5. В данном случае консоль значения берет со стека
 }
