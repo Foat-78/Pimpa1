@@ -16,8 +16,16 @@ Console.WriteLine($"{naturalNamberRange}");
 
 int NaturalNamberRange(int numM, int numN)
 {
-    int sum = 0;
-    if (numM > sum) return 0;
-     return sum + NaturalNamberRange(numM, numN-1);//5, 4, 3, 2, 1
-           
+    if (numM < 0 && numN < 0) Console.Write($"Ошибка - введите натуральное число");
+    else
+    {
+        if (numM == numN) return numN;
+
+        else if (numM > numN)
+        {
+            return numM + NaturalNamberRange(numM - 1, numN);
+        }
+        return numN + NaturalNamberRange(numM, numN - 1);//5, 4, 3, 2, 1
+    }
+    return numM;
 }
