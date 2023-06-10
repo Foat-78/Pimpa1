@@ -6,7 +6,7 @@
 // 1 2 3 4
 // 2 3 4 5
 
-int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
+int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4);
 PrintMatrix(createMatrixRndInt);
 
 
