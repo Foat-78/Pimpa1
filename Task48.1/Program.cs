@@ -10,7 +10,7 @@ int[,] createMatrixRndInt = CreateMatrixRndInt(3, 4, -100, 100);
 PrintMatrix(createMatrixRndInt);
 
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+int[,] CreateMatrixRndInt(int rows, int columns)
 {
     int[,] matrix = new int[rows, columns];
     for (int i = 0; i < matrix.GetLength(0); i++)
