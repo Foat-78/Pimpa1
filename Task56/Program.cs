@@ -20,13 +20,13 @@ Console.WriteLine($"Hомер строки с наименьшей суммой 
 
 int MinSumElemNum(int[] array)
 {
-    int num = 1;
+    int str = 1;
     int sumIndex = 0;
     for (int i = 0; i < array.Length; i++)
     {
         if (array[sumIndex] > array[i]) sumIndex = i;
     }
-    return sumIndex + num;
+    return sumIndex + str;
 }
 
 int[] CreateSumMinString(int[,] matrix)
