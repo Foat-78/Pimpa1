@@ -11,7 +11,41 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 
-int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+
+int[,] matrix = CreatMatrixRndInt(4, 4, 1, 4);
+PrintMatrix(matrix);
+
+int[] sumMinString = CreateSumMinString(matrix);
+Console.WriteLine($"Hомер строки с наименьшей суммой элементов: {MinSumElemNum(sumMinString)} строка");
+
+int MinSumElemNum(int[] array)
+{
+    int num = 1;
+    int sumIndex = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[sumIndex] > array[i]) sumIndex = i;
+    }
+    return sumIndex + num;
+}
+
+int[] CreateSumMinString(int[,] matrix)
+{
+    int[] arr = new int[matrix.GetLength(1)];
+
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        int sum = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum += matrix[j, i];
+        }
+        arr[j] = sum;
+    }
+    return arr;
+}
+
+int[,] CreatMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] matrix = new int[rows, columns];
     Random rnd = new Random();
@@ -36,38 +70,5 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+    Console.WriteLine();
 }
-
-int[] CreateSumMinString(int[,] matrix)
-{
-    int[] arr = new int[matrix.GetLength(1)];
-
-    for (int j = 0; j < matrix.GetLength(1); j++)
-    {
-        int sum = 0;
-        for (int i = 0; i < matrix.GetLength(0); i++)
-        {
-            sum += matrix[j, i];
-        }
-        arr[j] = sum;
-    }
-    return arr;
-}
-
-int PrintSumMinString(int[] arr)
-{
-    int min = arr[0];
-    for (int j = 0; j < arr.Length; j++)
-    {
-        if (arr[j] < min) min = arr[j];        
-    }
-    return min;
-}
-
-int[,] matrix = CreateMatrixRndInt(4, 4, 1, 5);
-PrintMatrix(matrix);
-
-int[] sumNumberString = CreateSumMinString(matrix);
-
-int sumMinString = PrintSumMinString(sumNumberString);
-Console.Write($"Строка с наименьшей суммой элементов: {sumMinString} строка");
